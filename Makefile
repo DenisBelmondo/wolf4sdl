@@ -2,7 +2,7 @@ CONFIG ?= config.default
 -include $(CONFIG)
 
 
-BINARY    ?= wolf3d
+BINARY    ?= bin/wolf3d
 PREFIX    ?= /usr/local
 MANPREFIX ?= $(PREFIX)
 
@@ -41,32 +41,32 @@ LDFLAGS += -static-libgcc
 endif
 
 SRCS :=
-SRCS += dosbox/dbopl.cpp
-SRCS += id_ca.cpp
-SRCS += id_in.cpp
-SRCS += id_pm.cpp
-SRCS += id_sd.cpp
-SRCS += id_us_1.cpp
-SRCS += id_vh.cpp
-SRCS += id_vl.cpp
-SRCS += signon.cpp
-SRCS += wl_act1.cpp
-SRCS += wl_act2.cpp
-SRCS += wl_agent.cpp
-SRCS += wl_atmos.cpp
-SRCS += wl_cloudsky.cpp
-SRCS += wl_debug.cpp
-SRCS += wl_draw.cpp
-SRCS += wl_floorceiling.cpp
-SRCS += wl_game.cpp
-SRCS += wl_inter.cpp
-SRCS += wl_main.cpp
-SRCS += wl_menu.cpp
-SRCS += wl_parallax.cpp
-SRCS += wl_play.cpp
-SRCS += wl_state.cpp
-SRCS += wl_text.cpp
-SRCS += states.cpp
+SRCS += src/dosbox/dbopl.cpp
+SRCS += src/id_ca.cpp
+SRCS += src/id_in.cpp
+SRCS += src/id_pm.cpp
+SRCS += src/id_sd.cpp
+SRCS += src/id_us_1.cpp
+SRCS += src/id_vh.cpp
+SRCS += src/id_vl.cpp
+SRCS += src/signon.cpp
+SRCS += src/wl_act1.cpp
+SRCS += src/wl_act2.cpp
+SRCS += src/wl_agent.cpp
+SRCS += src/wl_atmos.cpp
+SRCS += src/wl_cloudsky.cpp
+SRCS += src/wl_debug.cpp
+SRCS += src/wl_draw.cpp
+SRCS += src/wl_floorceiling.cpp
+SRCS += src/wl_game.cpp
+SRCS += src/wl_inter.cpp
+SRCS += src/wl_main.cpp
+SRCS += src/wl_menu.cpp
+SRCS += src/wl_parallax.cpp
+SRCS += src/wl_play.cpp
+SRCS += src/wl_state.cpp
+SRCS += src/wl_text.cpp
+SRCS += src/states.cpp
 
 DEPS = $(filter %.d, $(SRCS:.c=.d) $(SRCS:.cpp=.d))
 OBJS = $(filter %.o, $(SRCS:.c=.o) $(SRCS:.cpp=.o))

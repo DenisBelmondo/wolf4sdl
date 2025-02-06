@@ -1,0 +1,9 @@
+bin/*
+*.d
+*.o
+*.[Ww][Ll][36]
+*.[Ss][Oo][Dd]
+*.[Ss][Dd]1
+*.[Ss][Dd]2
+*.[Ss][Dd]3
+compile_commands.json
